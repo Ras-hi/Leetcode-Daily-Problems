@@ -14,12 +14,12 @@ public:
             
             if(val%3==0) cnt += (val/3);
             else{
-                if(val%3==1){
+                if(val%3==1 || val%3==2){
                     cnt += val/3 + 1;
                 } 
-                else if(val%3==2){
-                    cnt += val/3 + 1;
-                }
+                // else if(val%3==2){
+                //     cnt += val/3 + 1;
+                // }
             }
         }
         
