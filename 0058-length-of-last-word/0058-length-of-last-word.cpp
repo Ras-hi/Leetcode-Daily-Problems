@@ -1,19 +1,15 @@
 class Solution {
 public:
     int lengthOfLastWord(string s) {
-        int size = s.size();
-    int counter = 0;
-
-    // Traverse the string from the end
-    for (int i = size - 1; i >= 0; i--) {
-        // If we encounter a space and we've already counted some characters, break
-        if (isspace(s[i]) && counter > 0)
-            break;
-        // If the character is not a space, increment counter
-        if (!isspace(s[i]))
-            counter++;
-    }
-    return counter;
+        int size=s.size();
+        int counter=0,flag=0;
+        for(int i=size-1;i>=0;i--){
+            if(s[i]==' '&& counter>0)break;
+            if(s[i]!=' '){
+                counter++;
+            }
+        }
+        return counter;
     }
 };
 /*
