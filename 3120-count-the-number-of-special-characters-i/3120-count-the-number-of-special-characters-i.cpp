@@ -1,20 +1,37 @@
 class Solution {
 public:
-    int numberOfSpecialChars(string word) {
-        int or_lower = 0, or_upper = 0;
-        for(char ch : word){
-            if(islower(ch)){
-                or_lower |= (1<< (ch-'a'));
-            }else{
-                or_upper |= (1<< (ch-'A'));
-            }
-        }
+    int numberOfSpecialChars(string s) {
+        // set<int>slower;
+        // set<int>supper;
+        // for(auto it : word){
+        //     if(it>='a' && it<='z'){
+        //         slower.insert(it-'a');
+        //     }
+        //     else{
+        //         supper.insert(it-'A');
+        //     }
+        // }
+        // int cnt=0;
+        // for(auto it :slower){
+        //     if(supper.find(it) != slower.end()){
+        //         cnt++;
+        //     }
+        // }
+        // return cnt;
         
-        int ans=0;
-        for(int i=0;i<26;i++){
-            if(or_lower & (1<<i) && or_upper & (1<<i)) ans++;
+        set<int>s1;
+        set<int>s2;
+        for(auto i:s) {
+            if(i>='a' && i<='z')
+                s1.insert(i-'a');
+            else
+                s2.insert(i-'A');
         }
-        
-        return ans;
+        int c=0;
+        for(auto i:s1) {
+            if(s2.find(i)!=s2.end())
+                c++;
+        }
+        return c;
     }
 };
