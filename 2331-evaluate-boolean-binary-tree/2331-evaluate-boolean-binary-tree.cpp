@@ -12,6 +12,7 @@
 class Solution {
 public:
     bool evaluateTree(TreeNode* root) {
+        //post-order recursive solution 
         if(!root->left && !root->right) return root->val;
         bool l =evaluateTree(root->left);
         bool r =evaluateTree(root->right);
