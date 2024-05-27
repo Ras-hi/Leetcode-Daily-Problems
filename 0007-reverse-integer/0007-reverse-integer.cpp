@@ -1,6 +1,26 @@
 class Solution {
 public:
     int reverse(int x) {
+//         int flag=0;
+        
+//         if(x<0){
+//             x=abs(x);
+//             flag=1;
+//         }
+//         int rev=0;
+//         while(x>0){
+//             if(x>(INT_MAX-x%10)/10){
+//                 return 0;
+//             }
+//             rev=rev*10 +x%10;
+//             x=x/10;
+//         }
+//         if(flag==1){
+//             return -(rev);
+//         }
+//         else{
+//             return rev;
+//         }
         int flag=0;
         if(x<0){
             x=abs(x);
